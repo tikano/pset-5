@@ -26,7 +26,6 @@ window.onload = function() {
 }
 
 const start = function() {
-    const canvas = document.getElementById('student-canvas-2');
     const ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
@@ -36,6 +35,7 @@ const start = function() {
  */
 
 const sayHello = function() {
+   const canvas = document.getElementById('student-canvas-1');
    start();
    ctx.font = "48px sans-serif";
    
@@ -55,6 +55,7 @@ const sayHello = function() {
  */
 
 const drawRectangle = function() {
+    const canvas = document.getElementById('student-canvas-2');
     start();
     do {
     var width = prompt("Width: ")
@@ -94,6 +95,7 @@ const drawRectangle = function() {
  */
 
 const drawColoredRectangle = function() {
+    const canvas = document.getElementById('student-canvas-3');
     start();
     do {
     var color = (prompt("Color: "))
@@ -116,6 +118,7 @@ const drawColoredRectangle = function() {
  */
 
 const drawTriangle = function() {
+    const canvas = document.getElementById('student-canvas-4');
     start()
     do {
     var side1 = prompt("Side 1: ")
@@ -160,6 +163,7 @@ const drawTriangle = function() {
  */
 
 const drawFace = function() {
+    const canvas = document.getElementById('student-canvas-5');
     start();
     do {
     var radius = (prompt("Radius: "))
