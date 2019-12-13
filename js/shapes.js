@@ -25,10 +25,6 @@ window.onload = function() {
     document.getElementById("smile").onclick = drawFace;
 }
 
-const start = function() {
-    const ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-}
 
 /*
  * Exercise 1.
@@ -36,7 +32,8 @@ const start = function() {
 
 const sayHello = function() {
    const canvas = document.getElementById('student-canvas-1');
-   start();
+   const ctx = canvas.getContext('2d');
+   ctx.clearRect(0, 0, canvas.width, canvas.height);
    ctx.font = "48px sans-serif";
    
    do {
@@ -56,7 +53,8 @@ const sayHello = function() {
 
 const drawRectangle = function() {
     const canvas = document.getElementById('student-canvas-2');
-    start();
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     do {
     var width = prompt("Width: ")
     var height = prompt("Height: ")
@@ -96,7 +94,8 @@ const drawRectangle = function() {
 
 const drawColoredRectangle = function() {
     const canvas = document.getElementById('student-canvas-3');
-    start();
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     do {
     var color = (prompt("Color: "))
     if (color == null) {
@@ -119,7 +118,8 @@ const drawColoredRectangle = function() {
 
 const drawTriangle = function() {
     const canvas = document.getElementById('student-canvas-4');
-    start()
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     do {
     var side1 = prompt("Side 1: ")
     var side2 = prompt("Side 2: ")
@@ -164,7 +164,8 @@ const drawTriangle = function() {
 
 const drawFace = function() {
     const canvas = document.getElementById('student-canvas-5');
-    start();
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     do {
     var radius = (prompt("Radius: "))
     if (radius == null) {
