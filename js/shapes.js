@@ -37,11 +37,11 @@ const sayHello = function() {
    ctx.font = "48px sans-serif";
    
    do {
-    var prompt = prompt("Message: ")
-    if (prompt.length > 50) {
+    var promptl = prompt("Message: ")
+    if (promptl.length > 50) {
       alert("Your message is too long. Keep it under 50 characters")
     }
-  } while(prompt.length > 50 || prompt == null)
+  } while(promptl.length > 50 || promptl == null)
       
   ctx.strokeText(message, 30, 70, 994);
   
