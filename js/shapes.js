@@ -43,7 +43,7 @@ const sayHello = function() {
     }
   } while(promptl.length > 50 || promptl == null)
       
-  ctx.strokeText(message, 30, 70, 994);
+  ctx.strokeText(promptl, 30, 70, 994);
   
 };
 
@@ -61,7 +61,7 @@ const drawRectangle = function() {
     var x = prompt("X: ")
     var y = prompt("Y: ")
     if (width == null || height == null || x == null || y == null) {
-      
+      break;
     }
     if (width > 1024 || width < 1) {
       alert("Your width must be between 1 and 1024.")
@@ -130,6 +130,9 @@ const drawTriangle = function() {
     var base = Math.sqrt(hypotenuse*hypotenuse - height*height)
 
     if (base == 0 && height == 0 && hypotenuse == 0) {
+      break;
+    }
+    if (base == null || height == null || hypotenuse == null) {
       break;
     }
     side1 = Number(side1)
