@@ -211,6 +211,42 @@ const drawFace = function() {
  * Exercise 6 (extra credit).
  */
 
+const drawBlock = function(side, startx,  starty){
+    ctx.beginPath();
+    ctx.lineTo(startx, starty + side);
+    ctx.lineTo(startx + side, starty + side);
+    ctx.lineTo(startx + side, starty);
+    ctx.lineTo(startx, starty);
+    ctx.stroke();
+    ctx.closePath();
+}
 const drawPyramid = function() {
-    // write your exercise 5 code here
+    const canvas = document.getElementById('student-canvas-6');
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    do {
+    var side = (prompt("Side Length: "))
+    if (side == null) {
+      break;
+    }
+    if (side < 1) {
+      alert("Your sidelength must be at least 1.")
+    }
+  } while (side < 1)
+    ctx.moveTo(10, 10);
+    drawBlock(side, 10, 10);
+    drawBlock(side, 10 + side, 10);
+    drawBlock(side, 10 + 2 * side, 10);
+    drawBlock(side, 10 + 3 * side, 10);
+    drawBlock(side, 10 + 4 * side, 10);
+    drawBlock(side, 10 + 0.5 * side, 10 + side);
+    drawBlock(side, 10 + 1.5 * side, 10 + side);
+    drawBlock(side, 10 + 2.5 * side, 10 + side);
+    drawBlock(side, 10 + 3.5 * side, 10 + side);
+    drawBlock(side, 10 + 1 * side, 10 + 2 * side);
+    drawBlock(side, 10 + 2 * side, 10 + 2 * side);
+    drawBlock(side, 10 + 3 * side, 10 + 2 * side);
+    drawBlock(side, 10 + 1.5 * side, 10 + 3 * side);
+    drawBlock(side, 10 + 2.5 * side, 10 + 3 * side);
+    drawBlock(side, 10 + 2 * side, 10 + 4 * side);
 };
